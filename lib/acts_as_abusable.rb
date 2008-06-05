@@ -8,21 +8,23 @@ module LinkingPaths
              
       module ClassMethods
         def acts_as_abusable
-          has_many :abuses, :as => :resource
+          has_many :abuses, :as => :resource do
+            def confirmed
+             find(:all, :conditions => ["confirmed = ?", true])
+            end
+            def pending
+             find(:all, :conditions => ["confirmed = ?", false])
+            end
+          end
         
-          include Linkingpaths::Acts::Abusable::InstanceMethods
+          include LinkingPaths::Acts::Abusable::InstanceMethods
         end                   
       end
 
       # Adds instance methods.
       module InstanceMethods
         def abuse?
-          self.abuses.size > 0
-        end
-        
-        def confirm_as_abuse!
-          self.confirmed = true
-          self.save unless self.new_record?
+          !self.abuses.confirmed.blank?
         end
       end
 
