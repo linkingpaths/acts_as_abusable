@@ -3,6 +3,34 @@ acts_as_abusable
 
 Tiny plugin to mark any rails model instance as an abuse or site's community guideline violation.
 
+Example
+-------
+
+class Photo < ActiveRecord::Base
+  acts_as_abusable
+end
+
+This gives you:
+
+´
+# All reported abuses
+penthouse_sweetie_photo.reported_abuses
+
+# Positive abuses
+penthouse_sweetie_photo.reported_abuses.confirmed
+
+# Still not evaluated abuses
+penthouse_sweetie_photo.reported_abuses.pending
+´
+
+And a new ´Abuse´ model:
+
+abuse.confirmed?
+abuse.confirm!
+# URL used as base for 
+abuse.referer
+# Resource that supposely is an abuse
+abuse.resource
 
 
 Copyright (c) 2008 Linking Paths, released under the MIT license
