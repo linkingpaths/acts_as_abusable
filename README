@@ -12,7 +12,7 @@ end
 
 This gives you:
 
-´
+<pre>
 # All reported abuses
 penthouse_sweetie_photo.reported_abuses
 
@@ -21,7 +21,7 @@ penthouse_sweetie_photo.reported_abuses.confirmed
 
 # Still not evaluated abuses
 penthouse_sweetie_photo.reported_abuses.pending
-´
+</pre>
 
 And a new ´Abuse´ model:
 
