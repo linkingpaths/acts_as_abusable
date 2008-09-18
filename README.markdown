@@ -8,6 +8,8 @@ Installation
 
 <pre>
 script/plugin install git://github.com/linkingpaths/acts_as_abusable.git
+script/generate acts_as_abusable_migration
+rake db:migrate
 </pre>
 
 
