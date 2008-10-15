@@ -13,6 +13,7 @@ script/plugin install git://github.com/linkingpaths/acts_as_abusable.git
 </pre>
 
 * Gemplugin: 
+
 If you prefer the new "gemplugin" management system just insert the dependency on environment.rb:
 <pre>
 config.gem "acts_as_abusable"
