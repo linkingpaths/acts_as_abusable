@@ -6,20 +6,17 @@ Tiny plugin to mark any rails model instance as an abuse or site's community gui
 Installation
 ------------
 
-Traditionally...
+* Traditionally...
 
 <pre>
 script/plugin install git://github.com/linkingpaths/acts_as_abusable.git
 </pre>
 
-... but if you prefer the new "gemplugin" management system just insert the dependency on environment.rb:
-
+* ... but if you prefer the new "gemplugin" management system just insert the dependency on environment.rb:
 <pre>
 config.gem "acts_as_abusable"
 </pre>
-
 ... and install it:
-
 <pre>
 rake gems:install
 </pre>
