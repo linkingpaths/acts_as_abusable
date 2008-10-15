@@ -18,6 +18,12 @@ script/plugin install git://github.com/linkingpaths/acts_as_abusable.git
 config.gem "acts_as_abusable"
 </pre>
 
+... and install it:
+
+<pre>
+rake gems:install
+</pre>
+
 Finally use the builtin generator for the needed migration:
 
 <pre>
