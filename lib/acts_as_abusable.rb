@@ -1,3 +1,5 @@
+require 'abuse'
+
 module LinkingPaths
   module Acts #:nodoc:
     module Abusable #:nodoc:
@@ -30,4 +32,8 @@ module LinkingPaths
 
     end
   end
+end
+
+ActiveRecord::Base.class_eval do
+  include LinkingPaths::Acts::Abusable
 end

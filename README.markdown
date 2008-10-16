@@ -43,16 +43,16 @@ end
 This gives you:
 
 <pre>
-# All reported abuses
+# All abuse reports about this photo 
 penthouse_sweetie_photo.reported_abuses
 
 # Positive abuses
 penthouse_sweetie_photo.reported_abuses.confirmed
 
-# Still not evaluated abuses
+# Still not evaluated abuse reports
 penthouse_sweetie_photo.reported_abuses.pending
 
-# Confirmed. This is inter....erhm... and abuse.
+# Check if this photo has been positively marked as an abuse.
 penthouse_sweetie_photo.is_an_abuse?
 </pre>
 
@@ -62,10 +62,10 @@ And a new ´Abuse´ model:
 abuse.confirmed?
 abuse.confirm!
 
-# URL used as base for 
+# URL used as base for the abuse report
 abuse.referer
 
-# Resource that supposely is an abuse
+# Resource that is linked to the abuse report
 abuse.resource
 </pre>
 
