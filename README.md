@@ -69,4 +69,4 @@ abuse.referer
 abuse.resource
 </pre>
 
-Copyright (c) 2008 Linking Paths, released under the MIT license
+Copyright (c) 2008-2020 Linking Paths, released under the MIT license
